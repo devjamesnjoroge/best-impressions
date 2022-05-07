@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import make_response
 from flask_bootstrap import Bootstrap
 from config import config_options
 
@@ -7,6 +8,7 @@ bootstrap = Bootstrap()
 def create_app(config_name):
 
     app = Flask(__name__)
+
 
     #import Blueprints
     from .main import main as main_blueprint
@@ -19,5 +21,5 @@ def create_app(config_name):
 
     #initialising flask extensions
     bootstrap.init_app(app)
-    
+
     return app
