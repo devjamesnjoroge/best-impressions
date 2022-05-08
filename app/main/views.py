@@ -1,22 +1,14 @@
+from flask_login import login_required
 from . import main
-from flask import render_template, make_response
+from flask import render_template
 
 @main.route('/')
 def home():
 
-    resp = make_response(render_template('index.html'))
-
-    resp.set_cookie('',expires=0)
-
-    
-
-    return resp
+    return render_template('index.html')
 
 @main.route('/categories')
+@login_required
 def categories():
 
     return render_template('categories.html')
-
-
-
-
