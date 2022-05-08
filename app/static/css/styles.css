@@ -58,7 +58,7 @@ body{
 @media screen and (min-width: 1200px) {
 
     .nav-btns{
-        margin-left: 45vw;
+        margin-left: 50vw;
     }
 
     .nav1{
@@ -71,7 +71,7 @@ body{
 @media screen and (min-width: 992px) and (max-width: 1200px) {
 
     .nav-btns{
-        margin-left: 37vw;
+        margin-left: 42vw;
     }
 
     .img1{
@@ -88,7 +88,7 @@ body{
 @media screen and (min-width: 765px) and (max-width: 992px) {
 
     .nav-btns{
-        margin-left: 20vw;
+        margin-left: 25vw;
     }
     
 }
