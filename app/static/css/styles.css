@@ -3,11 +3,16 @@
 body{
     font-family: 'Lexend Deca', sans-serif;
 }
+
+/* navigation bar */
+
+
 #nav{
     padding-left: 5vw;
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
 
 #logo{
     color: gold;
@@ -19,20 +24,79 @@ body{
     color: black;
 }
 
+#btn1:hover{
+    color: white;
+}
+
+/* index.html */
+
+.hero{
+    padding: 5vh 0;
+}
+
+.herobtns{
+    margin-top: 7vh;
+    margin-left: 2vw;
+}
+
+/* Categories */
+
+.categories{
+    display: flex;
+    flex-direction: column;
+}
+
+.categories-row .card{
+   margin: 5vh 0;
+}
+
+.btnn{
+    transform: scale(1.3);
+}
 
 
 @media screen and (min-width: 1200px) {
 
     .nav-btns{
-        margin-left: 50vw;
+        margin-left: 45vw;
+    }
+
+    .nav1{
+        margin-left: 2vw;
     }
     
+
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
 
     .nav-btns{
-        margin-left: 40vw;
+        margin-left: 37vw;
+    }
+
+    .img1{
+        padding-top: 5vh;
+    }
+
+    .nav1{
+        margin-left: 2vw;
+    }
+    
+    
+}
+
+@media screen and (min-width: 765px) and (max-width: 992px) {
+
+    .nav-btns{
+        margin-left: 20vw;
+    }
+    
+}
+
+@media screen and (max-width: 992px) {
+
+    .img1{
+        padding-top: 5vh;
     }
     
 }

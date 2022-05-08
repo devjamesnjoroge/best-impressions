@@ -11,3 +11,12 @@ def home():
     
 
     return resp
+
+@main.route('/categories')
+def categories():
+
+    return render_template('categories.html')
+
+
+
+
