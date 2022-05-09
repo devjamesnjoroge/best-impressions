@@ -2,13 +2,37 @@
 {% import 'bootstrap/wtf.html' as wtf%}
 
 {% block content %}
-<div class="col-md-4"> </div>
-<div class="col-md-8">
-
-  {{wtf.quick_form(registration_form)}}
-
- </div>
 
 
+  <form>
+
+    <div class="form">
+
+      <label for="email">Enter your Email:</label>
+
+      {{ registration_form.email(class='form-control') }}
+      <br>
+
+      <label for="username">Enter Username:</label>
+
+      {{ registration_form.username(class='form-control') }}
+      <br>
+
+      <label for="password">Enter Password:</label>
+
+      {{ registration_form.password(class='form-control') }}
+      <br>
+
+      <label for="password">Confirm Password:</label>
+
+      {{ registration_form.password2(class='form-control') }}
+      <br>
+
+      {{ registration_form.submit(class='btn btn-warning mt-4 pt-4') }}
+      <br>
+
+    </div>
+
+  </form>
 
 {% endblock%}

@@ -3,32 +3,36 @@
 
 {% block content%}
 
-<div class="container">
-  <div class="row">
+      <form>
 
-    <div class="col-md-2"> </div>
+        <div class="form">
 
-    <div class="col-md-8">
-      <!-- Flash message -->
-      {% for message in get_flashed_messages() %}
-          <div class="alert alert-danger">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          {{ message }}
-          </div>
+          <label for="email">Enter your Email:</label>
 
-      {% endfor %}
-      <!-- Login form  -->
+          {{ login_form.email(class='form-control') }}
 
-      {{ wtf.quick_form(login_form) }}
+          <br>
 
-      <p> Don't  have an account?  <a href="{{url_for('auth.register')}}">Sign up here</a></p>
+          <label for="password">Enter Password:</label>
 
-    </div>
+          {{ login_form.password(class='form-control') }}
 
-    <div class="col-md-2"> </div>
+          <br>
 
-  </div>
-</div>
+          <label for="remember"> Remember me:</label>
 
+          {{ login_form.remember() }}
 
+          <br>
+
+          {{ login_form.submit(class='btn btn-warning mt-4 pt-4') }}
+
+          <br>
+          <br>
+
+          <p> Don't  have an account?  <a href="{{url_for('auth.register')}}">Sign up here</a></p>
+
+        </div>
+
+      </form>
 {%endblock%}
