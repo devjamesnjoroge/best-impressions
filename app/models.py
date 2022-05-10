@@ -35,7 +35,7 @@ class User(UserMixin, db.Model):
         db.session.commit()
 
     def __repr__(self):
-        return f'User {self.username}'
+        return f'{self.username} {self.pitches}'
 
 
 class Pitch(db.Model):
@@ -48,5 +48,9 @@ class Pitch(db.Model):
     time = db.Column(db.DateTime, default = datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
+    def save_p(self):
+        db.session.add(self)
+        db.session.commit()
+
     def __repr__(self):
-        return f'Pitch{self.category}'
+        return f'Pitch {self.category} {self.user_id}'
