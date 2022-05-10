@@ -14,7 +14,11 @@ def categories():
 
     return render_template('categories.html')
 
-@main.route('/profile/<uname>')
+@main.route('/user/<uname>')
 def profile(uname):
     user = User.query.filter_by(username = uname).first()
-    return render_template('profile/profile.html', user = user)
+
+    if user is None:
+        abort(404)
+
+    return render_template("profile/profile.html", user = user)
