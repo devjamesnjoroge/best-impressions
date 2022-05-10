@@ -10,12 +10,6 @@ def home():
 
     return render_template('index.html')
 
-@main.route('/categories')
-@login_required
-def categories():
-
-    return render_template('categories.html')
-
 @main.route('/user/<uname>')
 def profile(uname):
     user = User.query.filter_by(username = uname).first()

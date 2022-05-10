@@ -4,7 +4,7 @@ from flask import render_template,redirect,url_for,flash,request
 from ..models import User, Pitch
 from . import pitch
 
-@pitch.route('/pitch')
+@pitch.route('/pitches')
 def pitch():
 
     pitches = Pitch.query.all()

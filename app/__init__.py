@@ -27,7 +27,7 @@ def create_app(config_name):
     app.register_blueprint(auth_blueprint,url_prefix = '/auth')
 
     from .pitch import pitch as pitch_blueprint
-    app.register_blueprint(pitch_blueprint, url_prefix = '/pitch')
+    app.register_blueprint(pitch_blueprint, url_prefix = '/categories')
 
     # Creating the app configurations
 

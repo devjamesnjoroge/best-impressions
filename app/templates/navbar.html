@@ -12,11 +12,11 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav nav1">
                 <li><a href="/">Home</a></li>
-                <li><a href="/categories">Categories</a></li>
+                <li><a href="/categories/pitches">Categories</a></li>
                 <li><a href="/">About</a></li>
             </ul>
             <ul class="nav-btns nav navbar-nav">
-               
+
                 {% if current_user.is_authenticated %}
                   <li><a href="{{url_for('main.profile', uname=current_user.username)}}">Profile</a></li>
                   <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
