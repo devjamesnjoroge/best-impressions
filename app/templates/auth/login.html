@@ -1,38 +1,25 @@
-{% extends 'auth/auth-base.html'%}
+{% extends 'auth/auth-base.html' %}
 {% import 'bootstrap/wtf.html' as wtf%}
-
-{% block content%}
-
-      <form>
-
-        <div class="form">
-
-          <label for="email">Enter your Email:</label>
-
-          {{ login_form.email(class='form-control') }}
-
-          <br>
-
-          <label for="password">Enter Password:</label>
-
-          {{ login_form.password(class='form-control') }}
-
-          <br>
-
-          <label for="remember"> Remember me:</label>
-
-          {{ login_form.remember() }}
-
-          <br>
-
-          {{ login_form.submit(class='btn btn-warning mt-4 pt-4') }}
-
-          <br>
-          <br>
-
-          <p> Don't  have an account?  <a href="{{url_for('auth.register')}}">Sign up here</a></p>
-
+{% block content %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static',filename='css/particle.css')}}">
+{% endblock %}
+<div class="container form">
+    <div class="row" id="particle-js">
+      <div class= "col-md-3"></div>
+      <div class="col-md-6" id="login">
+          <h3 class="text-center"><i class="fas fa-sign-in-alt text-center"></i>&nbsp; <strong class="text-center" >Log In Here</strong></h3>
+      {% for message in get_flashed_messages() %}
+        <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
         </div>
-
-      </form>
-{%endblock%}
+      {% endfor %}
+      {{wtf.quick_form(login_form)}}
+      <p> Don't have an account? <a id="sign" href="{{url_for('auth.register')}}">Sign up here</a></p>
+     </div>
+     <div clas="col-md-3"> </div>
+    </div>
+</div>
+{% endblock %}
