@@ -54,6 +54,17 @@ body{
     transform: scale(1.3);
 }
 
+/* FORMS */
+
+form{
+  background-color: #333333;
+  padding: 5%;
+}
+
+label{
+  color: white
+}
+
 
 @media screen and (min-width: 1200px) {
 
@@ -64,7 +75,7 @@ body{
     .nav1{
         margin-left: 2vw;
     }
-    
+
 
 }
 
@@ -81,22 +92,18 @@ body{
     .nav1{
         margin-left: 2vw;
     }
-    
-    
+
+
 }
 
-/* FORMS */
 
-form{
-   background-color: black;
-}
 
 @media screen and (min-width: 765px) and (max-width: 992px) {
 
     .nav-btns{
         margin-left: 25vw;
     }
-    
+
 }
 
 @media screen and (max-width: 992px) {
@@ -104,6 +111,5 @@ form{
     .img1{
         padding-top: 5vh;
     }
-    
-}
 
+}
