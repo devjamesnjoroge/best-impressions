@@ -12,6 +12,7 @@ def pitch():
     promotion = Pitch.query.filter_by(category = 'promotion').all()
     victory = Pitch.query.filter_by(category = 'victory').all()
     motivation = Pitch.query.filter_by(category = 'motivation').all()
+    interview = Pitch.query.filter_by(category = 'interview').all()
 
 
-    return render_template('pitch/pitch.html', pitches = pitches, pickup_lines = pickup_lines, promotion = promotion, victory = victory, motivation = motivation)
+    return render_template('pitch/pitch.html', pitches = pitches, pickup_lines = pickup_lines, promotion = promotion, victory = victory, motivation = motivation, interview = interview)

@@ -1,0 +1,28 @@
+{% macro display(pitches) %}
+
+<div class="container">
+
+  <div class="row">
+
+    {% if pitches %}
+    {% for pitch in pitches %}
+
+    <div class="col-md-6">
+        <div class="card" style="width:400px">
+            <div class="card-body">
+              <h4 class="card-title">{{ pitch.category }}</h4>
+              <p class="card-text">{{ pitch.pitch }}</p>
+              <a href="#" class="btn btn-warning">View all</a>
+              <em>uploaded on: {{ pitch.time }}</em>
+            </div>
+          </div>
+    </div>
+
+    {% endfor %}
+    {% endif %}
+
+  </div>
+
+</div>
+
+{% endmacro %}
