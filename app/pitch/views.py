@@ -18,6 +18,21 @@ def pitch():
 
     return render_template('pitch/pitch.html', pitches = pitches, pickup_lines = pickup_lines, promotion = promotion, victory = victory, motivation = motivation, interview = interview)
 
+@category.route('/create_new', methods = ['POST','GET'])
+@login_required
+def new_pitch():
+    new_form = submitPitch()
+    if new_form.validate_on_submit():
+        category = new_form.category.data
+        pitch = new_form.pitch.data
+        category = new_form.category.data
+        user_id = current_user
+        new_pitch_object = Pitch(category=category,pitch = pitch, user_id=current_user._get_current_object().id)
+        new_pitch_object.save_p()
+        return redirect(url_for('category.pitch'))
+
+    return render_template('pitch/new_pitch.html', new_form = new_form)
+
 
 @category.route('/comment/<int:pitch_id>', methods = ['POST','GET'])
 @login_required

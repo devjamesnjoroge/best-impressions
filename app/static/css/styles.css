@@ -79,6 +79,9 @@ label{
   border-radius: 5px;
 }
 
+.tab-pane{
+  overflow-x: scroll;
+}
 
 @media screen and (min-width: 1200px) {
 
