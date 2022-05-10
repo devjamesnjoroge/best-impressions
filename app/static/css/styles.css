@@ -57,12 +57,26 @@ body{
 /* FORMS */
 
 form{
-  background-color: #333333;
+  background-color: #343a40;
   padding: 5%;
 }
 
 label{
   color: white
+}
+
+/* PITCHES */
+
+.cards{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;;
+  margin: 2rem;
+  background-color: #343a40;
+  padding: 1rem;
+  color: white;
+  border-radius: 5px;
 }
 
 

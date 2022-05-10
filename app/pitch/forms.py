@@ -9,3 +9,7 @@ CATEGORY_CHOICES = [('pickup_lines', 'pickup-lines'), ('interview', 'interview')
 class submitPitch(FlaskForm):
     category = SelectField(u'Choose a category for your pitch', choices=CATEGORY_CHOICES, validators = [DataRequired()])
     submit = SubmitField('Submit Pitch')
+
+class submitComment(FlaskForm):
+    comment = TextAreaField('Leave a message',validators=[DataRequired()])
+    submit = SubmitField('Comment')
