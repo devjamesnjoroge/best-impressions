@@ -8,15 +8,15 @@
 
           <div class="thumbnail">
               <div class="card-body">
-                <h4 class="card-title">{{ pitch.category | upper }}</h4>
-                <p class="card-text">{{ pitch.pitch }}</p>
+                <h4 class="card-title text-dark">{{ pitch.category | upper }}</h4>
+                <p class="card-text text-dark">{{ pitch.pitch }}</p>
                 <strong class="text-info">uploaded on:</strong> <em> {{ pitch.time }}</em>
                 <br>
                 <br>
-                <span>Posted by: {{ pitch.user.username }}</span>
+                <span class="text-dark">Posted by: {{ pitch.user.username }}</span>
                 <br>
                 <br>
-  							<span> {{ pitch.comment.count() }} Comments</span>
+  							<span class="text-dark"> {{ pitch.comment.count() }} Comments</span>
 
   								<a href="{{url_for('category.comment',pitch_id = pitch.id)}}" class="btn btn-warning text-dark btn-sm"> Comment</a>
               </div>
