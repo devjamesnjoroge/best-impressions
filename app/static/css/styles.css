@@ -71,12 +71,12 @@ label{
   display: flex;
   align-items: center;
   flex-direction: column;
-  flex-wrap: wrap;;
-  margin: 1rem;
+  flex-wrap: wrap;
   background-color: #343a40;
   padding: 1rem;
   color: white;
   border-radius: 5px;
+  margin: 10px;
 }
 
 
