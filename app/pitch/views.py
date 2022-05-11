@@ -9,7 +9,7 @@ from flask_login import login_required,current_user
 def pitch():
 
     pitches = Pitch.query.all()
-    pickup_lines = Pitch.query.filter_by(category = 'pickup-lines').all()
+    pickup_lines = Pitch.query.filter_by(category = 'pickup_lines').all()
     promotion = Pitch.query.filter_by(category = 'promotion').all()
     victory = Pitch.query.filter_by(category = 'victory').all()
     motivation = Pitch.query.filter_by(category = 'motivation').all()
