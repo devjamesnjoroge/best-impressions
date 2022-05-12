@@ -1,7 +1,11 @@
 # BEST IMPRESSIONS / PITCH app
 ## By `devjamesnjoroge`
+
 <img src='https://github.com/devjamesnjoroge/best-impressions/blob/master/app/static/images/banner.jpg'>
+
+
 ## ABOUT
+
 ### A Flask app implementing user authentication and uses postgresql database to store pitches uploaded by users
 
 ## USER STORIES
